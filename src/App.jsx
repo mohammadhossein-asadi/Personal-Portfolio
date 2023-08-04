@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar";
+import Header from "./components/Header";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -25,6 +26,9 @@ function App() {
             toggleMenu={toggleMenu}
             toggleTheme={toggleTheme}
           />
+          <section id="home" className="px-0 lg:px-5 2xl:px-40 py-10 lg:py-0">
+            <Header />
+          </section>
         </div>
       </div>
     </div>
