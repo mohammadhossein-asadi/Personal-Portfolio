@@ -27,7 +27,7 @@ function App() {
             toggleTheme={toggleTheme}
           />
           <section id="home" className="px-0 lg:px-5 2xl:px-40 py-10 lg:py-0">
-            <Header />
+            <Header darkMode={darkMode} />
           </section>
         </div>
       </div>

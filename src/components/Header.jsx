@@ -1,6 +1,6 @@
 import React from "react";
-import { Mongodb, Nextjs, Nodejs, Profile, Reactjs, Redux } from "../assets";
-const Header = () => {
+import { Nextjs2, Nextjs, Nodejs, Profile, Reactjs, Redux } from "../assets";
+const Header = ({ darkMode }) => {
   return (
     <div className="w-full flex flex-col lg:flex-row px-4 md:px-10 gap-10 2xl:gap-20 py-20">
       <div
@@ -39,7 +39,7 @@ const Header = () => {
             Hire Me
           </button>
           <a href="#projects">
-            <button className="text-lg text-white fonnt-semibold rounded-md py-3 px-5 bg-black dark:bg-[#224cff10]">
+            <button className="text-lg text-white font-semibold rounded-md py-3 px-5 bg-black dark:bg-[#224cff10]">
               Projects
             </button>
           </a>
@@ -62,7 +62,7 @@ const Header = () => {
               className="absolute bottom-7 left-[-0.25rem] md:bottom-10 2xl:left-4 w-12 h-12 md:w-16 md:h-16"
             />
             <img
-              src={Nextjs}
+              src={darkMode ? Nextjs : Nextjs2}
               className="absolute top-7 md:top-14 right-[-0.25rem] md:-right-3 2xl:right-2 w-12 h-12 md:w-16 md:h-16"
             />
             <img
