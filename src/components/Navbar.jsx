@@ -2,19 +2,22 @@ import { FiSun } from "react-icons/fi";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { BiMenu } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
+import Logo from "../assets/logo.jpeg";
 
 const Navbar = ({ darkMode, isOpen, toggleMenu, toggleTheme }) => {
   return (
     <div className="px-0 2xl:px-40">
       <div className="w-full items-center justify-between py-4 px-10">
         <div className="flex items-center justify-between w-full">
-          <a
-            href="/"
-            className="text-2xl font-bold text-blue-500 cursor-pointer"
-          >
-            Mohammadhossein
+          <a href="/">
+            <div className="flex justify-center items-center cursor-pointer xss:pt-6">
+              <img src={Logo} alt="logo" width={50} height={50} />
+              <h4 className="text-2xl font-bold text-blue-500 cursor-pointer pl-2">
+                Mohammadhossein
+              </h4>
+            </div>
           </a>
-          <ul className="hidden md:flex gap-10 text-lg text-slate-800 dark:text-gray-200">
+          <ul className="hidden md:flex gap-10 text-xl font-semibold text-slate-800 dark:text-gray-200">
             <li className="cursor-pointer hover:text-blue-500">
               <a href="#home">Home</a>
             </li>
@@ -29,7 +32,7 @@ const Navbar = ({ darkMode, isOpen, toggleMenu, toggleTheme }) => {
             {darkMode ? (
               <FiSun size={24} color="white" />
             ) : (
-              <BsFillMoonStarsFill size={24} color="gray" />
+              <BsFillMoonStarsFill size={24} color="black" />
             )}
           </button>
 
@@ -62,7 +65,7 @@ const Navbar = ({ darkMode, isOpen, toggleMenu, toggleTheme }) => {
           className={`${isOpen ? "block pt-4" : "hidden"} md:hidden`}
           id="mobile-menu"
         >
-          <div className="flex flex-col gap-4 text-md text-gray-700 dark:text-neutral-200">
+          <div className="flex flex-col gap-4 text-md text-gray-800 dark:text-neutral-200">
             <a href="#home" className="cursor-pointer" onClick={toggleMenu}>
               Home
             </a>
