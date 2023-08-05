@@ -7,7 +7,7 @@ import {
   Nextjs,
   Nextjs2,
   Nodejs,
-  Python,
+  Typescript,
   Reactjs,
   admin,
   food,
@@ -43,20 +43,20 @@ export const tools = [
     icon: Mongodb,
   },
   {
-    name: "Express",
-    icon: Express,
-  },
-  {
     name: "React",
     icon: Reactjs,
   },
   {
-    name: "NodeJs",
-    icon: Nodejs,
+    name: "Express",
+    icon: Express,
   },
   {
     name: "NextJs",
     icon: Nextjs2,
+  },
+  {
+    name: "NodeJs",
+    icon: Nodejs,
   },
 ];
 
@@ -67,14 +67,14 @@ export const skills = [
     icon: Reactjs,
   },
   {
-    name: "NodeJs",
-    value: 96,
-    icon: Nodejs,
-  },
-  {
     name: "NextJs",
     value: 97,
     icon: Nextjs,
+  },
+  {
+    name: "NodeJs",
+    value: 96,
+    icon: Nodejs,
   },
   {
     name: "MongoDB",
@@ -97,9 +97,9 @@ export const skills = [
     icon: Javascript,
   },
   {
-    name: "Python",
+    name: "Typescript",
     value: 78,
-    icon: Python,
+    icon: Typescript,
   },
 ];
 

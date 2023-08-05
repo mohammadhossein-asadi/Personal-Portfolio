@@ -1,4 +1,4 @@
-import { projectStats, tools } from "../data";
+import { tools } from "../data";
 
 const Project = () => {
   return (

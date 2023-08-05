@@ -10,7 +10,7 @@ export { default as Nextjs2 } from "./nextjs2.svg";
 export { default as CSS3 } from "./css3.svg";
 export { default as HTML5 } from "./html.svg";
 export { default as Javascript } from "./javascript.svg";
-export { default as Python } from "./python.svg";
+export { default as Typescript } from "./Typescript.svg";
 
 export { default as admin } from "./work/admin.png";
 export { default as food } from "./work/food.png";

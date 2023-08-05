@@ -7,7 +7,7 @@ import {
   Nextjs,
   Nextjs2,
   Nodejs,
-  Python,
+  Typescript,
   Reactjs,
   admin,
   food,
@@ -62,21 +62,30 @@ export const tools = [
 
 export const skills = [
   {
-    name: "ReactJs",
-    icon: Reactjs,
+    name: "JavaScript",
+    icon: Javascript,
   },
   {
-    name: "NodeJs",
-    icon: Nodejs,
+    name: "TypeScript",
+    icon: Typescript,
+  },
+  {
+    name: "ReactJs",
+    icon: Reactjs,
   },
   {
     name: "NextJs",
     icon: Nextjs,
   },
   {
+    name: "NodeJs",
+    icon: Nodejs,
+  },
+  {
     name: "MongoDB",
     icon: Mongodb,
   },
+
   {
     name: "CSS3",
     icon: CSS3,
@@ -84,14 +93,6 @@ export const skills = [
   {
     name: "HTML5",
     icon: HTML5,
-  },
-  {
-    name: "JavaScript",
-    icon: Javascript,
-  },
-  {
-    name: "Python",
-    icon: Python,
   },
 ];
 
