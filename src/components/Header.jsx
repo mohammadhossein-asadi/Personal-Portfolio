@@ -24,7 +24,7 @@ const Header = ({ darkMode }) => {
           </div>
         </div>
 
-        <h1 className="text-5xl 2xl:text-7xl font-extrabold text-black dark:text-neutral-100 tracking-wider">
+        <h1 className="text-5xl 2xl:text-7xl font-extrabold text-black dark:text-neutral-100 tracking-wider xss:text-[2rem] ">
           Mohammadhossein
         </h1>
 

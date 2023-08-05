@@ -10,9 +10,9 @@ const Navbar = ({ darkMode, isOpen, toggleMenu, toggleTheme }) => {
       <div className="w-full items-center justify-between py-4 px-10">
         <div className="flex items-center justify-between w-full">
           <a href="/">
-            <div className="flex justify-center items-center cursor-pointer xss:pt-6">
-              <img src={Logo} alt="logo" width={50} height={50} />
-              <h4 className="text-2xl font-bold text-blue-500 cursor-pointer pl-2">
+            <div className="flex justify-center items-center cursor-pointer">
+              <img src={Logo} alt="logo" width={40} height={40} />
+              <h4 className="text-2xl font-bold text-blue-500 cursor-pointer pl-2 xss:text-xl">
                 Mohammadhossein
               </h4>
             </div>

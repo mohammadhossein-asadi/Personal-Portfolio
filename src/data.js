@@ -9,6 +9,8 @@ import {
   Nodejs,
   Typescript,
   Reactjs,
+  Mui,
+  Tailwind,
   admin,
   food,
   food1,
@@ -85,7 +87,14 @@ export const skills = [
     name: "MongoDB",
     icon: Mongodb,
   },
-
+  {
+    name: "MaterialUi",
+    icon: Mui,
+  },
+  {
+    name: "Tailwind",
+    icon: Tailwind,
+  },
   {
     name: "CSS3",
     icon: CSS3,

@@ -1,7 +1,7 @@
 import { skills, softSkills } from "../data";
 import { BsCheck2All } from "react-icons/bs";
 
-const Skills = () => {
+const Skills = ({ darkMode }) => {
   return (
     <div className="w-full flex flex-col py-20">
       <h4 className="text-3xl font-bold text-black dark:text-white mb-10 text-center">
@@ -38,8 +38,12 @@ const Skills = () => {
           Soft Skills
         </h4>
 
-        <div className="flex flex-col md:flex-row gap-16 items-center justify-center">
-          <div className="flex flex-col bg-[#000000] dark:bg-[#224cff10] p-6 rounded-xl shadow-xl hover:scale-125 hover:shadow-white ease-in-out duration-500 mb-10 md:mb-0 cursor-pointer">
+        <div className="flex flex-col md:flex-row gap-20 items-center justify-center">
+          <div
+            className={`flex flex-col bg-[#000000] dark:bg-[#224cff10] p-6 rounded-xl shadow-xl hover:scale-125 ${
+              darkMode ? "hover:shadow-white" : "hover:shadow-black"
+            }  ease-in-out duration-500 mb-10 md:mb-0 cursor-pointer`}
+          >
             {softSkills.slice(0, 5).map((s, index) => (
               <div key={index + s} className="flex items-center gap-3 p-4">
                 <BsCheck2All color="white" size={22} />
@@ -48,7 +52,11 @@ const Skills = () => {
             ))}
           </div>
 
-          <div className="flex flex-col bg-[#000000] dark:bg-[#224cff10] p-6 rounded-xl shadow-xl hover:scale-125 hover:shadow-white ease-in-out duration-500 mb-10 md:mb-0 cursor-pointer">
+          <div
+            className={`flex flex-col bg-[#000000] dark:bg-[#224cff10] p-6 rounded-xl shadow-xl hover:scale-125 ${
+              darkMode ? "hover:shadow-white" : "hover:shadow-black"
+            }  ease-in-out duration-500 mb-10 md:mb-0 cursor-pointer`}
+          >
             {softSkills.slice(5, 10).map((s, index) => (
               <div key={index + s} className="flex items-center gap-3 p-4">
                 <BsCheck2All color="white" size={22} />
