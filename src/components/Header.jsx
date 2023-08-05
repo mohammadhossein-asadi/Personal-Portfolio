@@ -1,4 +1,3 @@
-import React from "react";
 import { Nextjs2, Nextjs, Nodejs, Profile, Reactjs, Redux } from "../assets";
 const Header = ({ darkMode }) => {
   return (
@@ -11,8 +10,8 @@ const Header = ({ darkMode }) => {
         data-aos-duration="1000"
         data-aos-easing="ease-in-out"
       >
-        <span className="text-lg font-bold text-orange-700">
-          FULL-STACK DEVELOPER
+        <span className="text-lg font-bold text-orange-600">
+          FRONT-END DEVELOPER
         </span>
         <div className="flex gap-4 items-center my-4">
           <h1 className="text-gray-800 dark:text-neutral-100 text-4xl md:text-5xl 2xl:text-7xl font-bold text-center">
@@ -26,12 +25,13 @@ const Header = ({ darkMode }) => {
         </div>
 
         <h1 className="text-5xl 2xl:text-7xl font-extrabold text-black dark:text-neutral-100 tracking-wider">
-          CodeWave
+          Mohammadhossein
         </h1>
 
         <p className="text-md text-black dark:text-gray-100 mt-5 2xl:mt-10">
-          Full-Stack Web Developer with ability to learn and collaborate in
-          rapidly changing environments and compositions.
+          Experienced Front-end developer specialized in ReactJS and NextJS,
+          with two years of professional experience. Strong team player familiar
+          with agile methodology, passionate about continuous learning.
         </p>
 
         <div className="mt-10 flex gap-10">
@@ -50,9 +50,21 @@ const Header = ({ darkMode }) => {
         <div className="w-[300px] h-[290px] md:w-[400px] md:h-[400px] 2xl:w-[500px] 2xl:h-[500px]  border rounded-full border-gray-600 dark:border-gray-200 relative  md:mt-20 lg:mt-0 flex items-center justify-center">
           <img
             src={Profile}
+            data-aos="fade-down"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="500"
+            data-aos-easing="ease-in-out"
             className="w-auto h-full absolute top-[0.25rem] md:top-0"
           />
-          <div className="relative w-full h-full rounded-full">
+          <div
+            className="relative w-full h-full rounded-full"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="700"
+            data-aos-easing="ease-in-out"
+          >
             <img
               src={Reactjs}
               className="absolute top-7 md:top-[4rem] left-[-0.25rem] md:-left-3 2xl:left-2 w-12 h-12 md:w-16 md:h-16"

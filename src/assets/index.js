@@ -21,3 +21,4 @@ export { default as port3 } from "./work/port3.png";
 export { default as social } from "./work/social.png";
 
 export { default as Profile } from "./profile.png";
+export { default as Profile2 } from "./profile2.png";

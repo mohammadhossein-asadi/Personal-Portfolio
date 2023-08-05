@@ -155,7 +155,7 @@ export const projects = [
   },
 ];
 
-export const softskills = [
+export const softSkills = [
   "Time management",
   "Communication",
   "Empathy",
