@@ -39,7 +39,7 @@ const Footer = () => {
 
       <div className="flex flex-col gap-10 items-center justify-center pb-5">
         <p className="text-white font-semibold tracking-wider text-2xl">
-          Social Media
+          shoping Media
         </p>
 
         <div className="flex gap-10 text-white text-2xl mb-10">

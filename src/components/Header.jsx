@@ -1,4 +1,4 @@
-import { Nextjs2, Nextjs, Nodejs, Profile, Redux } from "../assets";
+import { Nextjs2, Nextjs, Nodejs, Profile, Redux, Reactjs } from "../assets";
 const Header = ({ darkMode }) => {
   return (
     <div className="w-full flex flex-col lg:flex-row px-4 md:px-10 gap-10 2xl:gap-20 py-20">
@@ -66,7 +66,7 @@ const Header = ({ darkMode }) => {
             data-aos-easing="ease-in-out"
           >
             <img
-              src="https://techstack-generator.vercel.app/react-icon.svg"
+              src={Reactjs}
               className="absolute top-7 md:top-[4rem] left-[-0.25rem] md:-left-3 2xl:left-2 w-12 h-12 md:w-16 md:h-16"
             />
             <img

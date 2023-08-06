@@ -12,12 +12,11 @@ import {
   Mui,
   Tailwind,
   admin,
-  food,
-  food1,
+  house,
   port1,
   port2,
-  port3,
-  social,
+  todo,
+  shoping,
 } from "./assets";
 
 export const projectStats = [
@@ -129,31 +128,24 @@ export const projects = [
   },
   {
     id: 4,
-    title: "MTS Website",
+    title: "ToDo App",
     cat: "Web Design",
     url: "",
-    img: port3,
+    img: todo,
   },
   {
     id: 5,
-    title: "Eat Well Website",
+    title: "House Retinal",
     cat: "Web Design",
     url: "",
-    img: food,
+    img: house,
   },
   {
     id: 6,
-    title: "Social Media",
+    title: "Shoping ",
     cat: "Web App",
     url: "",
-    img: social,
-  },
-  {
-    id: 7,
-    title: "Eat Well App",
-    cat: "Mobile App",
-    url: "",
-    img: food1,
+    img: shoping,
   },
 ];
 

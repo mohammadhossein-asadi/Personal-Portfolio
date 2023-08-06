@@ -10,12 +10,11 @@ import {
   Typescript,
   Reactjs,
   admin,
-  food,
-  food1,
+  house,
   port1,
   port2,
-  port3,
-  social,
+  todo,
+  shoping,
 } from "./assets";
 
 export const projectStats = [
@@ -130,28 +129,21 @@ export const projects = [
     title: "MTS Website",
     cat: "Web Design",
     url: "",
-    img: port3,
+    img: todo,
   },
   {
     id: 5,
     title: "Eat Well Website",
     cat: "Web Design",
     url: "",
-    img: food,
+    img: house,
   },
   {
     id: 6,
-    title: "Social Media",
+    title: "shoping Media",
     cat: "Web App",
     url: "",
-    img: social,
-  },
-  {
-    id: 7,
-    title: "Eat Well App",
-    cat: "Mobile App",
-    url: "",
-    img: food1,
+    img: shoping,
   },
 ];
 
