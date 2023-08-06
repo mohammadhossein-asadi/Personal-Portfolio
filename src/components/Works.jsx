@@ -16,7 +16,7 @@ const Works = () => {
       <div className="flex flex-wrap gap-10 lg:gap-20 justify-center">
         {projects.map((project) => (
           <a
-            href={`//${project.url}`}
+            href={project.url}
             target="_blank"
             rel="noreferrer noopener"
             key={project.id}

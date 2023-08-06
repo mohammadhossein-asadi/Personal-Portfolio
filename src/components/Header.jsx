@@ -1,4 +1,6 @@
 import { Nextjs2, Nextjs, Nodejs, Profile, Redux, Reactjs } from "../assets";
+import Resume from "../assets/MohammadhosseinAsadi.pdf";
+
 const Header = ({ darkMode }) => {
   return (
     <div className="w-full flex flex-col lg:flex-row px-4 md:px-10 gap-10 2xl:gap-20 py-20">
@@ -35,9 +37,11 @@ const Header = ({ darkMode }) => {
         </p>
 
         <div className="mt-10 flex gap-10">
-          <button className="bg-orange-700 text-lg text-white font-semibold rounded-md py-3 px-5">
-            Hire Me
-          </button>
+          <a href={Resume} download>
+            <button className="bg-orange-700 text-lg text-white font-semibold rounded-md py-3 px-5">
+              Resume
+            </button>
+          </a>
           <a href="#projects">
             <button className="text-lg text-white font-semibold rounded-md py-3 px-5 bg-black dark:bg-[#224cff10]">
               Projects

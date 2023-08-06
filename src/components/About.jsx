@@ -30,7 +30,7 @@ const About = () => {
         </p>
 
         <div
-          className="mt-5 2xl:mt-10 flex flex-wrap gap-5"
+          className="mt-5 2xl:mt-10 flex flex-wrap gap-5 xss:flex-col"
           data-aos="fade-up"
           data-aos-offset="200"
           data-aos-delay="50"
