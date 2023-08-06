@@ -102,51 +102,6 @@ export const skills = [
   },
 ];
 
-export const projects = [
-  {
-    id: 1,
-    title: "Admin Dashboard",
-    cat: "Web Design",
-    url: "",
-    img: admin,
-  },
-  {
-    id: 2,
-    title: "Portfolio Website",
-    cat: "Web Design",
-    url: "",
-    img: port1,
-  },
-  {
-    id: 3,
-    title: "Portfolio Website",
-    cat: "Web Design",
-    url: "",
-    img: port2,
-  },
-  {
-    id: 4,
-    title: "MTS Website",
-    cat: "Web Design",
-    url: "",
-    img: todo,
-  },
-  {
-    id: 5,
-    title: "Eat Well Website",
-    cat: "Web Design",
-    url: "",
-    img: house,
-  },
-  {
-    id: 6,
-    title: "shoping Media",
-    cat: "Web App",
-    url: "",
-    img: shoping,
-  },
-];
-
 export const softSkills = [
   "Time management",
   "Communication",
