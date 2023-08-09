@@ -26,7 +26,7 @@ I am a highly motivated Front-end Developer with nearly two years of professiona
 
 My personal website serves as a digital showcase of my skills, accomplishments, and professional journey. Through the innovative use of technologies like JavaScript, ReactJs, and Tailwind CSS, I've designed this website to be more than just a portfolio – it's an interactive and engaging experience. The website incorporates dynamic animations, interactive components, and efficient styling, providing visitors with a unique and memorable exploration of my work and achievements.
 
-Explore my personal website: [mohammadhs.com](https://www.mohammadhs.com/)
+Explore my personal website: [mohammadhs.com](https://www.mohammadhs.com/){:target="_blank"}
 
 Feel free to reach out to me through the contact information provided on the website. Whether you're interested in collaboration, discussing projects, or just saying hello, I'm always excited to connect with fellow developers and enthusiasts.
 
