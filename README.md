@@ -14,10 +14,6 @@ This project makes use of various technologies and tools to deliver an engaging 
 
 - **AOS (Animate On Scroll):** AOS library adds captivating animations that trigger as users scroll, enhancing the visual appeal of the website.
 
-## About Me
-
-I am a highly motivated Front-end Developer with nearly two years of professional experience. My primary focus is on crafting elegant and user-friendly web applications using the power of ReactJS and NextJS. With a deep understanding of agile methodologies, I excel as a team player who can seamlessly integrate into dynamic development teams. My commitment to continuous learning ensures that I stay updated with the latest technologies, allowing me to deliver exceptional results in all my projects. I'm truly passionate about creating immersive and seamless user experiences that leave a lasting impact.
-
 ## Project Details
 
 My personal website serves as a digital showcase of my skills, accomplishments, and professional journey. Through the innovative use of technologies like JavaScript, ReactJs, and Tailwind CSS, I've designed this website to be more than just a portfolio – it's an interactive and engaging experience. The website incorporates dynamic animations, interactive components, and efficient styling, providing visitors with a unique and memorable exploration of my work and achievements.
