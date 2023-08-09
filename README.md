@@ -1,4 +1,4 @@
-# Mohammad's Personal Website
+# Mohammadhossein Asadi Personal Website
 
 Welcome to my personal website project repository! Here, you'll find the source code and assets for my captivating personal website.
 
@@ -33,4 +33,4 @@ Feel free to reach out to me through the contact information provided on the web
 Thank you for visiting my repository and taking the time to explore my journey and work!
 
 Best regards,
-Mohammad
+Mohammadhossein
