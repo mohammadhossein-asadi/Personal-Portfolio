@@ -6,7 +6,7 @@ import Logo from "../assets/logo.jpeg";
 
 const Navbar = ({ darkMode, isOpen, toggleMenu, toggleTheme }) => {
   return (
-    <div className="px-0 2xl:px-40">
+    <div className="px-0 2xl:px-20">
       <div className="w-full items-center justify-between py-4 px-10">
         <div className="flex items-center justify-between w-full">
           <a href="/">
@@ -28,10 +28,7 @@ const Navbar = ({ darkMode, isOpen, toggleMenu, toggleTheme }) => {
               <a href="#projects">Projects</a>
             </li>
           </ul>
-          <button
-            onClick={toggleTheme}
-            className="lg:ml-4 ml-[18rem] xss:ml-[3rem]"
-          >
+          <button onClick={toggleTheme} className="lg:ml-4 xss:ml-[1rem]">
             {darkMode ? (
               <FiSun size={24} color="white" />
             ) : (
@@ -39,7 +36,7 @@ const Navbar = ({ darkMode, isOpen, toggleMenu, toggleTheme }) => {
             )}
           </button>
 
-          <div className="md:hidden xss:mr-[-15px] mt-[6px]">
+          <div className="md:hidden xss:mr-[-12px] mt-[6px]">
             <button
               type="button"
               className=""
@@ -48,7 +45,7 @@ const Navbar = ({ darkMode, isOpen, toggleMenu, toggleTheme }) => {
               onClick={toggleMenu}
             >
               <BiMenu
-                size={26}
+                size={31}
                 className={`${
                   isOpen ? "hidden" : "block"
                 } text-gray-700 dark:text-gray-300`}
