@@ -28,7 +28,10 @@ const Navbar = ({ darkMode, isOpen, toggleMenu, toggleTheme }) => {
               <a href="#projects">Projects</a>
             </li>
           </ul>
-          <button onClick={toggleTheme}>
+          <button
+            onClick={toggleTheme}
+            className="lg:ml-4 ml-[18rem] xss:ml-[3rem]"
+          >
             {darkMode ? (
               <FiSun size={24} color="white" />
             ) : (
@@ -36,7 +39,7 @@ const Navbar = ({ darkMode, isOpen, toggleMenu, toggleTheme }) => {
             )}
           </button>
 
-          <div className="md:hidden">
+          <div className="md:hidden xss:mr-[-15px] mt-[6px]">
             <button
               type="button"
               className=""

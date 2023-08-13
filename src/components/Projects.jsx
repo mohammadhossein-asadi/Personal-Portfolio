@@ -2,7 +2,7 @@ import { tools } from "../data";
 
 const Project = () => {
   return (
-    <div>
+    <>
       <div className="w-full flex flex-wrap items-center justify-center gap-10 lg:gap-20">
         {tools.map((tool) => (
           <div
@@ -14,7 +14,7 @@ const Project = () => {
           </div>
         ))}
       </div>
-    </div>
+    </>
   );
 };
 

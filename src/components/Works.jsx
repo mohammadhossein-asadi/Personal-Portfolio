@@ -1,10 +1,4 @@
-import React from "react";
 import { projects } from "../data";
-
-const cleanLink = (link) => {
-  const baseUrl = "http://localhost:5173/";
-  return link.replace(baseUrl, "").replace(/^\/+/, ""); // اضافه کردن این خط برای حذف اولین '/' اضافی
-};
 
 const Works = () => {
   return (
@@ -27,7 +21,7 @@ const Works = () => {
               data-aos-delay="50"
               data-aos-duration="700"
               data-aos-easing="ease-in-out"
-              className="w-[350px] h-[350px] cursor-pointer shadow-xl rounded-md"
+              className="w-[350px] h-[350px] cursor-pointer shadow-xl rounded-md xss:w-[300px] xss:h-[300px]"
             >
               <div className="hover:scale-110 ease-in-out duration-300">
                 <img
