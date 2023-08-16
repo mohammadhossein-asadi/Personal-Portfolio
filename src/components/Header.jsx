@@ -54,6 +54,7 @@ const Header = ({ darkMode }) => {
         <div className="w-[300px] h-[290px] md:w-[400px] md:h-[400px] 2xl:w-[500px] 2xl:h-[500px]  border rounded-full border-gray-600 dark:border-gray-200 relative  md:mt-20 lg:mt-0 flex items-center justify-center">
           <img
             src={Profile}
+            loading="lazy"
             data-aos="fade-down"
             data-aos-offset="200"
             data-aos-delay="50"
@@ -71,18 +72,22 @@ const Header = ({ darkMode }) => {
           >
             <img
               src={Reactjs}
+              loading="lazy"
               className="absolute top-7 md:top-[4rem] left-[-0.25rem] md:-left-3 2xl:left-2 w-12 h-12 md:w-16 md:h-16"
             />
             <img
               src={Redux}
+              loading="lazy"
               className="absolute bottom-7 left-[-0.25rem] md:bottom-10 2xl:left-4 w-12 h-12 md:w-16 md:h-16"
             />
             <img
               src={darkMode ? Nextjs : Nextjs2}
+              loading="lazy"
               className="absolute top-7 md:top-14 right-[-0.25rem] md:-right-3 2xl:right-2 w-12 h-12 md:w-16 md:h-16"
             />
             <img
               src={Nodejs}
+              loading="lazy"
               className="absolute bottom-7 right-[-0.25rem] md:bottom-10 2xl:right-4 w-12 h-12 md:w-16 md:h-16"
             />
           </div>

@@ -42,6 +42,7 @@ const Works = ({ darkMode }) => {
               <img
                 src={project.img}
                 alt={project.title}
+                loading="lazy"
                 className="w-full h-[250px] object-cover rounded-md"
               />
               <div className="w-full h-[100px] bg-white dark:bg-[#04133e]">
@@ -85,15 +86,12 @@ const Works = ({ darkMode }) => {
                   </span>
                 </div>
                 <div className="relative py-3 px-5 flex-auto">
-                  {selectedProject ? (
-                    <img
-                      src={selectedProject.gif}
-                      alt={selectedProject.title}
-                      className="rounded-lg shadow-2xl w-full h-full"
-                    />
-                  ) : (
-                    <div className="animate-pulse bg-gray-200 dark:bg-gray-700 w-[728px] h-[333px]"></div>
-                  )}
+                  <img
+                    src={selectedProject.gif}
+                    alt={selectedProject.title}
+                    loading="lazy"
+                    className="rounded-lg shadow-2xl w-full h-full"
+                  />
                   <div className="flex pt-3">
                     <span className="text-lg font-medium text-white dark:text-black">
                       Technologies:
