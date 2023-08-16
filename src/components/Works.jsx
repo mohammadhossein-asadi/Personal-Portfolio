@@ -77,16 +77,23 @@ const Works = ({ darkMode }) => {
                   <h3 className="text-3xl font-semibold text-white dark:text-black">
                     {selectedProject.title}
                   </h3>
-                  <span className="border-0 float-right" onClick={closeModal}>
-                    <AiOutlineClose size={26} color="white" />
+                  <span
+                    className="border-0 float-right text-white dark:text-black"
+                    onClick={closeModal}
+                  >
+                    <AiOutlineClose size={27} />
                   </span>
                 </div>
                 <div className="relative py-3 px-5 flex-auto">
-                  <img
-                    src={selectedProject.gif}
-                    alt={selectedProject.title}
-                    className="rounded-lg shadow-2xl"
-                  />
+                  {selectedProject ? (
+                    <img
+                      src={selectedProject.gif}
+                      alt={selectedProject.title}
+                      className="rounded-lg shadow-2xl w-full h-full"
+                    />
+                  ) : (
+                    <div className="animate-pulse bg-gray-200 dark:bg-gray-700 w-[728px] h-[333px]"></div>
+                  )}
                   <div className="flex pt-3">
                     <span className="text-lg font-medium text-white dark:text-black">
                       Technologies:
