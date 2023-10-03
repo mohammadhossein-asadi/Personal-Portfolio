@@ -123,8 +123,7 @@ export const projects = [
     description: `An advanced Admin Dashboard project using ReactJs, Material-UI (MUI), Nivo charts, Formik, Yup, and
     FullCalendar to create a powerful management interface. It features interactive components, dynamic
     animations, statistical insights through Nivo charts, and efficient form handling with Formik and Yup.
-    Additionally, FullCalendar is integrated for easy event scheduling and management. This project is
-    designed to streamline administrative tasks and enhance user experience.`,
+    Additionally, FullCalendar is integrated for easy event scheduling and management.`,
     technologies: [
       "ReactJs",
       "MUI",
