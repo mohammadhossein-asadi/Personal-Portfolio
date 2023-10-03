@@ -1,12 +1,33 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { projects } from "../data";
 import { ImLink } from "react-icons/im";
 import { BsGithub } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
+import { MdDescription } from "react-icons/md";
+import {
+  Accordion,
+  AccordionHeader,
+  AccordionBody,
+} from "@material-tailwind/react";
+
+const CUSTOM_ANIMATION = {
+  mount: { scale: 1 },
+  unmount: { scale: 0.9 },
+};
 
 const Works = ({ darkMode }) => {
   const [showModal, setShowModal] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [open, setOpen] = useState(null);
+
+  const handleOpenAccordion = (value) => {
+    if (open === value) {
+      setOpen(null);
+    } else {
+      setOpen(value);
+    }
+  };
 
   const openModal = (project) => {
     setSelectedProject(project);
@@ -17,8 +38,55 @@ const Works = ({ darkMode }) => {
     setShowModal(false);
   };
 
+  useEffect(() => {
+    // Function to update window width
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    // Attach the event listener
+    window.addEventListener("resize", handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const stopPropagation = (e) => {
     e.stopPropagation();
+  };
+
+  // Determine whether to use <details> or <p> based on windowWidth
+  const renderDescription = () => {
+    if (windowWidth <= 640) {
+      return (
+        <Accordion open={open === 1} animate={CUSTOM_ANIMATION}>
+          <AccordionHeader
+            onClick={() => handleOpenAccordion(1)}
+            className={`border-b-0 transition-colors cursor-pointer shadow-lg px-4 m-2 ${
+              open === 1 ? "text-blue-500 hover:!text-blue-700 shadow-none" : ""
+            }`}
+          >
+            <span className="flex items-center justify-center">
+              <MdDescription className="mr-1" />
+              Description
+            </span>
+          </AccordionHeader>
+          {open === 1 && (
+            <AccordionBody className="pt-0 text-base font-normal">
+              {selectedProject.description}
+            </AccordionBody>
+          )}
+        </Accordion>
+      );
+    } else {
+      return (
+        <p className="font-semibold p-4 text-white dark:text-black xss:p-1">
+          {selectedProject.description}
+        </p>
+      );
+    }
   };
 
   return (
@@ -26,7 +94,7 @@ const Works = ({ darkMode }) => {
       <h4 className="text-3xl font-bold text-black dark:text-white mt-10 text-center">
         Projects
       </h4>
-      <div className="flex flex-wrap gap-10 lg:gap-20 justify-center">
+      <div className="flex flex-wrap gap-10 lg:gap-20 xxs:gap-24 justify-center">
         {projects.map((project) => (
           <div
             key={project.id}
@@ -68,7 +136,7 @@ const Works = ({ darkMode }) => {
               onClick={stopPropagation}
             >
               <div
-                className={`border-0 rounded-lg shadow-lg relative flex flex-col lg:w-[700px] md:w-[600px] xxs:w-[330px] xss:w-[280px] outline-none focus:outline-none w-full h-full ${
+                className={`border-0 rounded-lg shadow-lg relative flex flex-col lg:w-[700px] md:w-[620px] xxs:w-[330px] xss:w-[280px] outline-none focus:outline-none w-full h-full ${
                   darkMode
                     ? "bg-white"
                     : "bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#05174e] to-[#030a1c]"
@@ -91,7 +159,7 @@ const Works = ({ darkMode }) => {
                     className="rounded-lg shadow-2xl w-full h-full"
                     autoPlay
                   ></video>
-                  <div className="flex pt-3 xxs:flex xxs:flex-wrap xxs:gap-2 xss:gap-1">
+                  <div className="flex pt-3 md:flex-wrap sm:flex-wrap md:gap-2 xxs:flex xxs:flex-wrap xxs:gap-2 xss:gap-1">
                     <span className="text-lg font-medium text-white dark:text-black">
                       Technologies:
                     </span>
@@ -104,9 +172,8 @@ const Works = ({ darkMode }) => {
                       </span>
                     ))}
                   </div>
-                  <p className="font-semibold p-4 text-white dark:text-black xss:p-1">
-                    {selectedProject.description}
-                  </p>
+                  {renderDescription()}{" "}
+                  {/* Render description based on window width */}
                   <div className="flex gap-3">
                     <a
                       href={selectedProject.url}
