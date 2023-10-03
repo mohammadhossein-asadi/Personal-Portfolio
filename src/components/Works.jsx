@@ -64,7 +64,9 @@ const Works = ({ darkMode }) => {
         <Accordion open={open === 1} animate={CUSTOM_ANIMATION}>
           <AccordionHeader
             onClick={() => handleOpenAccordion(1)}
-            className={`border-b-0 transition-colors text-white cursor-pointer ${
+            className={`border-b-0 transition-colors ${
+              darkMode ? "text-black" : "text-white"
+            } cursor-pointer ${
               darkMode ? "shadow-white" : "shadow-lg"
             } px-4 m-2 ${
               open === 1 ? "text-blue-500 hover:!text-blue-700 shadow-none" : ""
@@ -78,7 +80,7 @@ const Works = ({ darkMode }) => {
           {open === 1 && (
             <AccordionBody
               className={`pt-0 text-base font-semibold ${
-                darkMode ? "text-white" : "text-gray-400"
+                darkMode ? "text-gray-800" : "text-white"
               }`}
             >
               {selectedProject.description}
