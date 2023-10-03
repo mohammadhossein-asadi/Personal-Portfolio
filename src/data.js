@@ -19,12 +19,12 @@ import {
   shoping,
 } from "./assets";
 
-import Personal from "./assets/work/personal.gif";
-import Portfolio from "./assets/work/portfolio.gif";
-import Admin from "./assets/work/admin.gif";
-import House from "./assets/work/house.gif";
-import Todo from "./assets/work/todo.gif";
-import Shopping from "./assets/work/shopping.gif";
+import Personal from "./assets/work/personal.mp4";
+import Portfolio from "./assets/work/portfolio.mp4";
+import Admin from "./assets/work/admin.mp4";
+import House from "./assets/work/house.mp4";
+import Todo from "./assets/work/todo.mp4";
+import Shopping from "./assets/work/shopping.mp4";
 
 export const projectStats = [
   {
@@ -119,7 +119,7 @@ export const projects = [
     url: "https://dashboard.mohammadhs.com",
     code: "https://github.com/mohammadhossein-asadi/React-Admin-Dashboard",
     img: admin,
-    gif: Admin,
+    video: Admin,
     description: `An advanced Admin Dashboard project using ReactJs, Material-UI (MUI), Nivo charts, Formik, Yup, and
     FullCalendar to create a powerful management interface. It features interactive components, dynamic
     animations, statistical insights through Nivo charts, and efficient form handling with Formik and Yup.
@@ -141,7 +141,7 @@ export const projects = [
     url: "https://mohammadhs.com",
     code: "https://github.com/mohammadhossein-asadi/Personal-Website",
     img: port1,
-    gif: Personal,
+    video: Personal,
     description: `A captivating personal website using JavaScript, ReactJs, and Tailwind CSS to showcase my portfolio and
     professional journey, featuring dynamic animations and interactive components for seamless navigation
     and efficient styling. This website highlights my skills and accomplishments in an engaging and visually
@@ -155,7 +155,7 @@ export const projects = [
     url: "https://portfolio.mohammadhs.com",
     code: "https://github.com/mohammadhossein-asadi/Next-Personal-Portfolio",
     img: port2,
-    gif: Portfolio,
+    video: Portfolio,
     description: `A modern portfolio website utilizing JavaScript, Next.js, and Tailwind CSS to showcase projects. Next.js
     offers improved performance with server-side rendering, and Tailwind CSS ensures a visually appealing
     and responsive design, making it a standout platform for displaying creative work.`,
@@ -168,7 +168,7 @@ export const projects = [
     url: "https://todoapp.mohammadhs.com",
     code: "https://github.com/mohammadhossein-asadi/React-ToDo-App",
     img: todo,
-    gif: Todo,
+    video: Todo,
     description: `The To-do App is a simple task management application built with JavaScript, React, and CSS for a userfriendly interface and easy task organization.`,
     technologies: ["JavaScript", "React", "CSS"],
   },
@@ -179,7 +179,7 @@ export const projects = [
     url: "https://houserental.mohammadhs.com",
     code: "https://github.com/mohammadhossein-asadi/House-Rental-Website",
     img: house,
-    gif: House,
+    video: House,
     description: `Dynamic House Rental Website: Built with JavaScript, HTML, and CSS, using Grid layout for an organized
     and appealing presentation. Facilitates rental listings, offering seamless user experience to find
     properties. Perfect for users seeking an intuitive platform to discover their ideal rental homes
@@ -193,7 +193,7 @@ export const projects = [
     url: "https://shopping.mohammadhs.com",
     code: "https://github.com/mohammadhossein-asadi/Redux-Shopping-Cart-App",
     img: shoping,
-    gif: Shopping,
+    video: Shopping,
     description: `Shopping Cart is a JavaScript-based web app using React, Redux, and Redux Thunk for state
     management and asynchronous actions, offering an interactive and efficient shopping experience.`,
     technologies: ["JavaScript", "React", "Redux", "Redux thunk"],

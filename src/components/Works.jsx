@@ -64,11 +64,11 @@ const Works = ({ darkMode }) => {
             onClick={closeModal}
           >
             <div
-              className="relative w-auto my-6 mx-auto max-w-3xl"
+              className="relative w-auto my-6 mx-auto max-w-2xl"
               onClick={stopPropagation}
             >
               <div
-                className={`border-0 rounded-lg shadow-lg relative flex flex-col w-full outline-none focus:outline-none w-full h-full ${
+                className={`border-0 rounded-lg shadow-lg relative flex flex-col lg:w-[700px] md:w-[600px] xxs:w-[330px] xss:w-[280px] outline-none focus:outline-none w-full h-full ${
                   darkMode
                     ? "bg-white"
                     : "bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#05174e] to-[#030a1c]"
@@ -86,13 +86,12 @@ const Works = ({ darkMode }) => {
                   </span>
                 </div>
                 <div className="relative py-3 px-5 flex-auto">
-                  <img
-                    src={selectedProject.gif}
-                    alt={selectedProject.title}
-                    loading="lazy"
+                  <video
+                    src={selectedProject.video}
                     className="rounded-lg shadow-2xl w-full h-full"
-                  />
-                  <div className="flex pt-3">
+                    autoPlay
+                  ></video>
+                  <div className="flex pt-3 xxs:flex xxs:flex-wrap xxs:gap-2 xss:gap-1">
                     <span className="text-lg font-medium text-white dark:text-black">
                       Technologies:
                     </span>
@@ -105,7 +104,7 @@ const Works = ({ darkMode }) => {
                       </span>
                     ))}
                   </div>
-                  <p className="font-semibold p-4 text-white dark:text-black">
+                  <p className="font-semibold p-4 text-white dark:text-black xss:p-1">
                     {selectedProject.description}
                   </p>
                   <div className="flex gap-3">
