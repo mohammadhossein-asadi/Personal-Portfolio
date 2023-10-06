@@ -40,7 +40,7 @@ const Skills = ({ darkMode }) => {
 
         <div className="flex flex-col md:flex-row gap-20 items-center justify-center">
           <div
-            className={`flex flex-col bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#05174e] to-[#030a1c] dark:bg-[#224cff10] p-6 rounded-xl shadow-2xl hover:scale-125 ${
+            className={`flex flex-col bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#05174e] to-[#030a1c] dark:bg-[#224cff10] p-6 rounded-xl shadow-2xl hover:scale-110 ${
               darkMode ? "hover:shadow-white" : "hover:shadow-black"
             }  ease-in-out duration-500 mb-10 md:mb-0 cursor-pointer`}
           >
@@ -53,7 +53,7 @@ const Skills = ({ darkMode }) => {
           </div>
 
           <div
-            className={`flex flex-col bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#05174e] to-[#030a1c] dark:bg-[#224cff10] p-6 rounded-xl shadow-2xl hover:scale-125 ${
+            className={`flex flex-col bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#05174e] to-[#030a1c] dark:bg-[#224cff10] p-6 rounded-xl shadow-2xl hover:scale-110 ${
               darkMode ? "hover:shadow-white" : "hover:shadow-black"
             }  ease-in-out duration-500 mb-10 md:mb-0 cursor-pointer`}
           >
