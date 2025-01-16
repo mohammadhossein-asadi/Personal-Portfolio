@@ -38,6 +38,14 @@ export const projectStats = [
 
 export const tools = [
   {
+    name: "Project Name",
+    icon: "/path/to/project-image.jpg",
+    description: "A brief description of the project and what it does.",
+    tech: ["React", "Node.js", "MongoDB"],
+    demo: "https://demo-link.com",
+    github: "https://github.com/username/repo",
+  },
+  {
     name: "MongoDB",
     icon: Mongodb,
   },

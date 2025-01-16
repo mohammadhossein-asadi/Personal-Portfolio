@@ -1,79 +1,98 @@
 import { Profile2 } from "../assets";
 import { MdOutlineAlternateEmail } from "react-icons/md";
-import { BsFillTelephoneFill } from "react-icons/bs";
-import { BsTelegram, BsLinkedin, BsGithub } from "react-icons/bs";
+import {
+  BsFillTelephoneFill,
+  BsTelegram,
+  BsLinkedin,
+  BsGithub,
+} from "react-icons/bs";
+
+const contactLinks = [
+  {
+    icon: <MdOutlineAlternateEmail className="w-5 h-5" />,
+    text: "mha779@gmail.com",
+    href: "mailto:mha779@gmail.com",
+  },
+  {
+    icon: <BsFillTelephoneFill className="w-5 h-5" />,
+    text: "+98 9912769675",
+    href: "tel:+989912769675",
+  },
+  {
+    icon: <BsTelegram className="w-5 h-5" />,
+    text: "Telegram",
+    href: "https://t.me/mohammad_h_sd",
+  },
+  {
+    icon: <BsLinkedin className="w-5 h-5" />,
+    text: "LinkedIn",
+    href: "https://www.linkedin.com/in/mohammadhossein-asadi/",
+  },
+  {
+    icon: <BsGithub className="w-5 h-5" />,
+    text: "GitHub",
+    href: "https://github.com/mohammadhossein-asadi",
+  },
+];
 
 const About = () => {
   return (
-    <div className="w-full flex flex-col lg:flex-row px-8 md:px-10 gap-10 lg:gap-20 lg:py-20 xss:pb-0">
-      <div className="w-full md:h-[290px] lg:w-1/3 flex flex-col items-center border border-gray-500 dark:bg-transparent rounded-md">
-        <img
-          src={Profile2}
-          alt="Profile"
-          className="h-[290px] p-1 rounded-md ease-in-out duration-300 hover:scale-125"
-        />
-      </div>
+    <section id="about" className="py-16 bg-white dark:bg-gray-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
+          {/* Image Container */}
+          <div className="w-full lg:w-1/3">
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200" />
+              <div className="relative aspect-square overflow-hidden rounded-lg">
+                <img
+                  src={Profile2}
+                  alt="Profile"
+                  className="w-full h-full object-cover transform transition duration-500 group-hover:scale-110"
+                />
+              </div>
+            </div>
+          </div>
 
-      <div className="w-full flex flex-col">
-        <p className="text-3xl font-bold text-black dark:text-white  ">
-          About Me
-        </p>
-        <p className="text-lg text-black dark:text-gray-400 leading-10">
-          As a front-end programmer, I offer a wide range of services to cater
-          to specific needs, from brand design to top-notch web development
-          skills. It is my passion to share knowledge and provide personalized
-          teaching sessions to my students. My strengths are front-end web
-          development, JavaScript, TypeScript, ReactJs, NextJs, and NodeJs. My
-          goal is to create meaningful user experiences by taking on web
-          development challenges. We can achieve something amazing together if
-          we work together!
-        </p>
+          {/* Content Container */}
+          <div className="w-full lg:w-2/3 space-y-8">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                About Me
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                As a front-end programmer, I offer a wide range of services to
+                cater to specific needs, from brand design to top-notch web
+                development skills. It is my passion to share knowledge and
+                provide personalized teaching sessions to my students. My
+                strengths are front-end web development, JavaScript, TypeScript,
+                ReactJs, NextJs, and NodeJs. My goal is to create meaningful
+                user experiences by taking on web development challenges. We can
+                achieve something amazing together if we work together!
+              </p>
+            </div>
 
-        <div
-          className="mt-5 2xl:mt-10 flex flex-wrap gap-5 xss:flex-col"
-          data-aos="fade-up"
-          data-aos-offset="200"
-          data-aos-delay="50"
-          data-aos-duration="700"
-          data-aos-easing="ease-in-out"
-        >
-          <p className="flex gap-3 items-center justify-center rounded-full shadow-lg py-2 px-4 bg-[#030a1c] text-white cursor-pointer">
-            <MdOutlineAlternateEmail size={16} /> mha779@gmail.com
-          </p>
-
-          <p className="flex gap-3 items-center justify-center rounded-full shadow-lg py-2 px-4 bg-[#030a1c] text-white cursor-pointer">
-            <BsFillTelephoneFill size={16} /> +98 9912769675
-          </p>
-
-          <a
-            href="https://t.me/mohammad_h_sd"
-            target="_blank"
-            rel="noreferrer"
-            className="flex gap-3 items-center justify-center rounded-full shadow-lg py-2 px-4 bg-[#030a1c] text-white cursor-pointer"
-          >
-            <BsTelegram size={16} /> Telegram
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/mohammadhossein-asadi/"
-            target="_blank"
-            rel="noreferrer"
-            className="flex gap-3 items-center justify-center rounded-full shadow-lg py-2 px-4 bg-[#030a1c] text-white cursor-pointer"
-          >
-            <BsLinkedin size={16} /> LinkedIn
-          </a>
-
-          <a
-            href="https://github.com/mohammadhossein-asadi"
-            target="_blank"
-            rel="noreferrer"
-            className="flex gap-3 items-center justify-center rounded-full shadow-lg py-2 px-4 bg-[#030a1c] text-white cursor-pointer"
-          >
-            <BsGithub size={16} /> GitHub
-          </a>
+            {/* Contact Links */}
+            <div className="flex flex-wrap gap-4">
+              {contactLinks.map((link) => (
+                <a
+                  key={link.text}
+                  href={link.href}
+                  target={link.href.startsWith("http") ? "_blank" : undefined}
+                  rel={link.href.startsWith("http") ? "noreferrer" : undefined}
+                  className="flex items-center gap-2 px-4 py-2 rounded-full 
+                    bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700
+                    text-gray-700 dark:text-gray-300 transition-colors duration-300"
+                >
+                  {link.icon}
+                  <span className="font-medium">{link.text}</span>
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

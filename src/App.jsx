@@ -1,11 +1,16 @@
-import { useState } from "react";
+import { Suspense, lazy, useEffect } from "react";
+import { ThemeProvider, useTheme } from "./context/ThemeContext";
+import LoadingSpinner from "./components/shared/LoadingSpinner";
+import { useInitialLoading } from "./hooks/useInitialLoading";
 import Navbar from "./components/Navbar";
-import Header from "./components/Header";
-import Projects from "./components/Projects";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Works from "./components/Works";
-import Footer from "./components/Footer";
+
+// Lazy load components
+const Header = lazy(() => import("./components/Header"));
+const Projects = lazy(() => import("./components/Projects"));
+const About = lazy(() => import("./components/About"));
+const Skills = lazy(() => import("./components/Skills"));
+const Works = lazy(() => import("./components/Works"));
+const Footer = lazy(() => import("./components/Footer"));
 
 // AOS
 import AOS from "aos";
@@ -14,62 +19,74 @@ import "aos/dist/aos.css";
 AOS.init();
 
 function App() {
-  const [darkMode, setDarkMode] = useState(true);
-  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <ThemeProvider>
+      <AppContent />
+    </ThemeProvider>
+  );
+}
 
-  const toggleMenu = () => {
-    setIsOpen((prev) => !prev);
-  };
+function AppContent() {
+  const { darkMode } = useTheme();
+  const isLoading = useInitialLoading();
 
-  const toggleTheme = () => {
-    setDarkMode((prev) => !prev);
-  };
+  useEffect(() => {
+    // Remove preload class after initial page load
+    const timer = setTimeout(() => {
+      document.documentElement.classList.remove("preload");
+    }, 200);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Add preload class to prevent transitions on initial load
+  useEffect(() => {
+    document.documentElement.classList.add("preload");
+  }, []);
+
+  if (isLoading) {
+    return <LoadingSpinner />;
+  }
 
   return (
-    <div
-      className={`w-full h-full min-h[100vh] bg-white ${darkMode && "dark"}`}
-    >
-      <div className="w-full h-full min-h-[100vh] bg-white">
-        <div className="dark:bg-gradient-to-tr from-[#0235a3] via-[#030a1c] to-[#05174e]">
-          <Navbar
-            darkMode={darkMode}
-            isOpen={isOpen}
-            toggleMenu={toggleMenu}
-            toggleTheme={toggleTheme}
-          />
-          <section id="home" className="px-0 lg:px-5 2xl:px-40 py-10 lg:py-0">
-            <Header darkMode={darkMode} />
-          </section>
+    <div className={`w-full min-h-screen bg-white ${darkMode ? "dark" : ""}`}>
+      <div className="w-full min-h-screen bg-white dark:bg-[#030a1c]">
+        <Navbar />
+        <Suspense fallback={<LoadingSpinner />}>
+          <main className="flex flex-col w-full">
+            <section
+              id="home"
+              className="w-full px-4 md:px-8 lg:px-16 2xl:px-40 py-10 lg:py-20"
+            >
+              <Header />
+            </section>
 
-          <section className="w-full bg-[#061130] py-20">
-            <Projects />
-          </section>
+            <section
+              id="about"
+              className="w-full px-4 md:px-8 lg:px-16 2xl:px-40 py-10 lg:py-20 bg-gray-50 dark:bg-[#061130]"
+            >
+              <About />
+            </section>
 
-          <section
-            id="about"
-            className="w-full px-0 lg:px-5 2xl:px-40 py-10 lg:py-0 dark:bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#030a1c] to-[#05174e]"
-          >
-            <About />
-          </section>
+            <section
+              id="skills"
+              className="w-full px-4 md:px-8 lg:px-16 2xl:px-40 py-10 lg:py-20"
+            >
+              <Skills />
+            </section>
 
-          <section
-            id="skills"
-            className="w-full px-0 lg:px-5 2xl:px-40 py-10 lg:py-0 dark:bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#05174e] to-[#030a1c]"
-          >
-            <Skills darkMode={darkMode} />
-          </section>
+            <section
+              id="projects"
+              className="w-full px-4 md:px-8 lg:px-16 2xl:px-40 py-10 lg:py-20 bg-gray-50 dark:bg-[#061130]"
+            >
+              <Works />
+            </section>
 
-          <section
-            id="projects"
-            className="w-full px-0 lg:px-5 2xl:px-40 py-10 lg:py-0 dark:bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#030a1c] to-[#05174e]"
-          >
-            <Works darkMode={darkMode} />
-          </section>
-
-          <div className="w-full px-0 lg:px-5 2xl:px-40 py-10 lg:py-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#05174e] to-[#030a1c]">
-            <Footer />
-          </div>
-        </div>
+            <footer className="w-full px-4 md:px-8 lg:px-16 2xl:px-40 py-10">
+              <Footer />
+            </footer>
+          </main>
+        </Suspense>
       </div>
     </div>
   );

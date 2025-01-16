@@ -132,6 +132,7 @@ export const projects = [
       "Yup",
       "Full Calendar",
     ],
+    live: "https://actual-live-url.com",
   },
   {
     id: 2,
@@ -146,6 +147,7 @@ export const projects = [
     and efficient styling. This website highlights my skills and accomplishments in an engaging and visually
     appealing manner.`,
     technologies: ["JavaScript", "ReactJs", "Tailwind CSS", "AOS"],
+    live: "https://actual-live-url.com",
   },
   {
     id: 3,
@@ -159,6 +161,7 @@ export const projects = [
     offers improved performance with server-side rendering, and Tailwind CSS ensures a visually appealing
     and responsive design, making it a standout platform for displaying creative work.`,
     technologies: ["JavaScript", "NextJs", "Tailwind"],
+    live: "https://actual-live-url.com",
   },
   {
     id: 4,
@@ -170,6 +173,7 @@ export const projects = [
     video: Todo,
     description: `The To-do App is a simple task management application built with JavaScript, React, and CSS for a userfriendly interface and easy task organization.`,
     technologies: ["JavaScript", "React", "CSS"],
+    live: "https://actual-live-url.com",
   },
   {
     id: 5,
@@ -184,6 +188,7 @@ export const projects = [
     properties. Perfect for users seeking an intuitive platform to discover their ideal rental homes
     effortlessly.`,
     technologies: ["JavaScript", "HTML", "CSS", "Grid"],
+    live: "https://actual-live-url.com",
   },
   {
     id: 6,
@@ -196,6 +201,7 @@ export const projects = [
     description: `Shopping Cart is a JavaScript-based web app using React, Redux, and Redux Thunk for state
     management and asynchronous actions, offering an interactive and efficient shopping experience.`,
     technologies: ["JavaScript", "React", "Redux", "Redux thunk"],
+    live: "https://actual-live-url.com",
   },
 ];
 

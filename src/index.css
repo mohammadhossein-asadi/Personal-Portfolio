@@ -7,3 +7,22 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Add smooth theme transitions */
+*,
+*::before,
+*::after {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+/* Exclude certain properties from transition */
+.transition-none {
+  transition: none;
+}
+
+/* Prevent transition on page load */
+.preload * {
+  transition: none !important;
+}
