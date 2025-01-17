@@ -24,16 +24,18 @@ const Navbar = () => {
           </a>
 
           <ul className="hidden md:flex items-center space-x-8">
-            {["Home", "About", "Projects"].map((item) => (
-              <li key={item}>
-                <a
-                  href={`#${item.toLowerCase()}`}
-                  className="text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 font-medium transition-colors"
-                >
-                  {item}
-                </a>
-              </li>
-            ))}
+            {["Home", "About", "Experience", "Skills", "Projects"].map(
+              (item) => (
+                <li key={item}>
+                  <a
+                    href={`#${item.toLowerCase()}`}
+                    className="text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 font-medium transition-colors"
+                  >
+                    {item}
+                  </a>
+                </li>
+              )
+            )}
           </ul>
 
           <div className="flex items-center space-x-4">
@@ -74,7 +76,7 @@ const Navbar = () => {
           } md:hidden py-4 space-y-4 transition-all duration-200`}
           id="mobile-menu"
         >
-          {["Home", "About", "Projects"].map((item) => (
+          {["Home", "About", "Experience", "Skills", "Projects"].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}

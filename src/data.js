@@ -45,6 +45,27 @@ export const projectStats = [
   },
 ];
 
+export const experiences = [
+  {
+    company: "APSignals",
+    role: "Front-End Developer | Mentor Assistant",
+    period: "Oct 2021 – Nov 2023",
+    achievements: [
+      "Developed a comprehensive assignment submission and management system, improving collaboration and efficiency for students and mentors by 15%. Built reusable components and custom hooks, reducing redundant code by 30%.",
+      "Utilized the MERN stack to design dynamic and responsive web applications, integrating industry best practices and streamlining the development process.",
+    ],
+  },
+  {
+    company: "Fanap",
+    role: "Front-End Developer | Internship",
+    period: "Aug 2021 – Oct 2021",
+    achievements: [
+      "Designed and developed real-time web pages with HTML, CSS, and JavaScript, including interactive charts and dashboards, and implemented user-friendly websites with optimized performance.",
+      "Participated in Agile methodologies to enhance team productivity and project management, ensuring timely delivery of projects.",
+    ],
+  },
+];
+
 export const tools = [
   {
     name: "MongoDB",

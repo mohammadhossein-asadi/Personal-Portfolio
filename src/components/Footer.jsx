@@ -3,7 +3,7 @@ import { BiLogoGmail } from "react-icons/bi";
 import { BsGithub, BsInstagram, BsLinkedin, BsTelegram } from "react-icons/bs";
 
 const Footer = () => {
-  const navLinks = ["Home", "About", "Projects"];
+  const navLinks = ["Home", "About", "Experience", "Skills", "Projects"];
   const socialLinks = [
     {
       icon: <BsLinkedin className="w-6 h-6" />,

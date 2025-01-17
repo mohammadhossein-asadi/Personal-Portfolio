@@ -3,6 +3,7 @@ import { ThemeProvider, useTheme } from "./context/ThemeContext";
 import LoadingSpinner from "./components/shared/LoadingSpinner";
 import { useInitialLoading } from "./hooks/useInitialLoading";
 import Navbar from "./components/Navbar";
+import Experience from "./components/Experience";
 
 // Lazy load components
 const Header = lazy(() => import("./components/Header"));
@@ -66,6 +67,13 @@ function AppContent() {
               className="w-full px-4 md:px-8 lg:px-16 2xl:px-40 py-10 lg:py-20 bg-gray-50 dark:bg-[#061130]"
             >
               <About />
+            </section>
+
+            <section
+              id="experience"
+              className="w-full px-4 md:px-8 lg:px-16 2xl:px-40 py-10 lg:py-20"
+            >
+              <Experience />
             </section>
 
             <section
