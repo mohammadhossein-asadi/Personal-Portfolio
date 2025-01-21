@@ -88,5 +88,3 @@ The portfolio is fully responsive across all devices:
 ## 🌐 Live Demo
 
 Experience the live version here: [mohammadhs.com](https://mohammadhossein1.vercel.app/)
-
-## 📂 Project Structure
