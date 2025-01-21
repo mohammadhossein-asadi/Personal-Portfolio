@@ -15,16 +15,16 @@ import {
   house,
   port1,
   port2,
-  todo,
-  shoping,
+  tictactoe,
+  connectify,
 } from "./assets";
 
-import Personal from "./assets/work/personal.mp4";
+import Personal from "./assets/work/personal.gif";
 import Portfolio from "./assets/work/portfolio.mp4";
 import Admin from "./assets/work/admin.mp4";
 import House from "./assets/work/house.mp4";
-import Todo from "./assets/work/todo.mp4";
-import Shopping from "./assets/work/shopping.mp4";
+import TicTacToe from "./assets/work/tictactoe.gif";
+import Connectify from "./assets/work/connectify.gif";
 
 export const projectStats = [
   {
@@ -135,25 +135,23 @@ export const skills = [
 export const projects = [
   {
     id: 1,
-    title: "Admin Dashboard",
-    cat: "Web Design",
-    url: "https://dashboard.mohammadhs.com",
-    code: "https://github.com/mohammadhossein-asadi/React-Admin-Dashboard",
-    img: admin,
-    video: Admin,
-    description: `An advanced Admin Dashboard project using ReactJs, Material-UI (MUI), Nivo charts, Formik, Yup, and
-    FullCalendar to create a powerful management interface. It features interactive components, dynamic
-    animations, statistical insights through Nivo charts, and efficient form handling with Formik and Yup.
-    Additionally, FullCalendar is integrated for easy event scheduling and management.`,
+    title: "Connectify",
+    cat: "Web App",
+    url: "https://connectifysocial.vercel.app/",
+    code: "https://github.com/mohammadhossein-asadi/Connectify-client",
+    img: connectify,
+    video: Connectify,
+    description: `A modern social media platform that allows users to create, share, and engage with content. Built with React, Redux Toolkit, and Material-UI, Connectify offers a seamless user experience with real-time updates and interactive features.`,
     technologies: [
-      "ReactJs",
-      "MUI",
-      "Nivo charts",
+      "React",
+      "Redux Toolkit",
+      "Material UI",
+      "Redux Persist",
+      "React Dropzone",
       "Formik",
       "Yup",
-      "Full Calendar",
     ],
-    live: "https://actual-live-url.com",
+    live: "https://connectifysocial.vercel.app/",
   },
   {
     id: 2,
@@ -172,35 +170,28 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Portfolio Website",
-    cat: "Web Design",
-    url: "https://portfolio.mohammadhs.com",
-    code: "https://github.com/mohammadhossein-asadi/Next-Personal-Portfolio",
-    img: port2,
-    video: Portfolio,
-    description: `A modern portfolio website utilizing JavaScript, Next.js, and Tailwind CSS to showcase projects. Next.js
-    offers improved performance with server-side rendering, and Tailwind CSS ensures a visually appealing
-    and responsive design, making it a standout platform for displaying creative work.`,
-    technologies: ["JavaScript", "NextJs", "Tailwind"],
-    live: "https://actual-live-url.com",
+    title: "Tic Tac Toe",
+    cat: "Web App",
+    url: "https://tic-tac-toe-next-js-p.vercel.app/",
+    code: "https://github.com/mohammadhossein-asadi/Tic-Tac-Toe-NextJS",
+    img: tictactoe,
+    video: TicTacToe,
+    description: `A modern implementation of the classic Tic Tac Toe game built with Next.js, TypeScript, and Framer Motion. Features a beautiful UI, smooth animations, and advanced gameplay features like move history and undo/redo functionality.`,
+    technologies: [
+      "TypeScript",
+      "NextJs",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Radix UI",
+      "Lucide Icons",
+    ],
+    live: "https://tic-tac-toe-next-js-p.vercel.app/",
   },
   {
     id: 4,
-    title: "ToDo App",
-    cat: "Web Design",
-    url: "https://todoapp.mohammadhs.com",
-    code: "https://github.com/mohammadhossein-asadi/React-ToDo-App",
-    img: todo,
-    video: Todo,
-    description: `The To-do App is a simple task management application built with JavaScript, React, and CSS for a userfriendly interface and easy task organization.`,
-    technologies: ["JavaScript", "React", "CSS"],
-    live: "https://actual-live-url.com",
-  },
-  {
-    id: 5,
     title: "House Rental",
     cat: "Web Design",
-    url: "https://houserental.mohammadhs.com",
+    url: "https://house-rental-website.vercel.app/",
     code: "https://github.com/mohammadhossein-asadi/House-Rental-Website",
     img: house,
     video: House,
@@ -209,20 +200,43 @@ export const projects = [
     properties. Perfect for users seeking an intuitive platform to discover their ideal rental homes
     effortlessly.`,
     technologies: ["JavaScript", "HTML", "CSS", "Grid"],
-    live: "https://actual-live-url.com",
+    live: "https://house-rental-website.vercel.app/",
+  },
+  {
+    id: 5,
+    title: "Admin Dashboard",
+    cat: "Web Design",
+    url: "https://react-admin-dashboard-p.vercel.app/",
+    code: "https://github.com/mohammadhossein-asadi/React-Admin-Dashboard",
+    img: admin,
+    video: Admin,
+    description: `An advanced Admin Dashboard project using ReactJs, Material-UI (MUI), Nivo charts, Formik, Yup, and
+    FullCalendar to create a powerful management interface. It features interactive components, dynamic
+    animations, statistical insights through Nivo charts, and efficient form handling with Formik and Yup.
+    Additionally, FullCalendar is integrated for easy event scheduling and management.`,
+    technologies: [
+      "ReactJs",
+      "MUI",
+      "Nivo charts",
+      "Formik",
+      "Yup",
+      "Full Calendar",
+    ],
+    live: "https://react-admin-dashboard-p.vercel.app/",
   },
   {
     id: 6,
-    title: "Shopping Cards",
-    cat: "Web App",
-    url: "https://shopping.mohammadhs.com",
-    code: "https://github.com/mohammadhossein-asadi/Redux-Shopping-Cart-App",
-    img: shoping,
-    video: Shopping,
-    description: `Shopping Cart is a JavaScript-based web app using React, Redux, and Redux Thunk for state
-    management and asynchronous actions, offering an interactive and efficient shopping experience.`,
-    technologies: ["JavaScript", "React", "Redux", "Redux thunk"],
-    live: "https://actual-live-url.com",
+    title: "Portfolio Website",
+    cat: "Web Design",
+    url: "https://next-personal-portfolio-p.vercel.app/",
+    code: "https://github.com/mohammadhossein-asadi/Next-Personal-Portfolio",
+    img: port2,
+    video: Portfolio,
+    description: `A modern portfolio website utilizing JavaScript, Next.js, and Tailwind CSS to showcase projects. Next.js
+    offers improved performance with server-side rendering, and Tailwind CSS ensures a visually appealing
+    and responsive design, making it a standout platform for displaying creative work.`,
+    technologies: ["JavaScript", "NextJs", "Tailwind"],
+    live: "https://next-personal-portfolio-p.vercel.app/",
   },
 ];
 
