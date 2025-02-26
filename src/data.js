@@ -104,7 +104,7 @@ export const skills = [
   },
   {
     name: "NextJs",
-    icon: Nextjs,
+    icon: ({ darkMode }) => (darkMode ? Nextjs : Nextjs2),
   },
   {
     name: "NodeJs",
