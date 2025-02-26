@@ -71,13 +71,13 @@ const Header = () => {
           <div className="w-full lg:w-1/2">
             <div className="relative w-[280px] h-[280px] md:w-[400px] md:h-[400px] 2xl:w-[500px] 2xl:h-[500px] mx-auto">
               {/* Profile Image */}
-              <div className="relative z-10">
+              <div className="relative z-0">
                 <img
                   src={Profile}
                   alt="Profile"
                   loading="lazy"
                   className="w-auto h-full object-cover transform transition-transform duration-500 
-                    hover:scale-105"
+                    hover:scale-105 rounded-xl"
                   data-aos="fade-down"
                   data-aos-offset="200"
                   data-aos-delay="50"
@@ -88,7 +88,7 @@ const Header = () => {
 
               {/* Tech Icons */}
               <div
-                className="absolute inset-0 z-0"
+                className="absolute inset-0 z-10"
                 data-aos="fade-up"
                 data-aos-offset="200"
                 data-aos-delay="50"
@@ -102,7 +102,7 @@ const Header = () => {
                     alt={icon.alt}
                     loading="lazy"
                     className={`absolute w-12 h-12 md:w-16 md:h-16 transform hover:scale-110 
-                      transition-transform duration-300 ${icon.className}`}
+                      transition-transform duration-300 bg-white dark:bg-gray-900 rounded-full p-2 ${icon.className}`}
                   />
                 ))}
               </div>
