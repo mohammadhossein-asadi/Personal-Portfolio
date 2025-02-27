@@ -1,8 +1,18 @@
 import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import { useTheme } from "../../context/ThemeContext";
 
 const Image = ({ src, alt, className, loading = "lazy", priority = false }) => {
-  const [imageSrc, setImageSrc] = useState(priority ? src : "");
+  const { darkMode } = useTheme();
+  const [imageSrc, setImageSrc] = useState(
+    priority
+      ? typeof src === "object"
+        ? darkMode
+          ? src.dark
+          : src.light
+        : src
+      : ""
+  );
   const [error, setError] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const { ref, inView } = useInView({
@@ -14,13 +24,21 @@ const Image = ({ src, alt, className, loading = "lazy", priority = false }) => {
   useEffect(() => {
     if ((inView || priority) && !imageSrc) {
       const img = new window.Image();
-      img.src = src;
+      const currentSrc =
+        typeof src === "object" ? (darkMode ? src.dark : src.light) : src;
+      img.src = currentSrc;
       img.onload = () => {
-        setImageSrc(src);
+        setImageSrc(currentSrc);
       };
       img.onerror = handleError;
     }
-  }, [inView, src, imageSrc, priority]);
+  }, [inView, src, imageSrc, priority, darkMode]);
+
+  useEffect(() => {
+    if (typeof src === "object") {
+      setImageSrc(darkMode ? src.dark : src.light);
+    }
+  }, [darkMode, src]);
 
   const handleLoad = () => {
     setIsLoaded(true);
@@ -34,8 +52,8 @@ const Image = ({ src, alt, className, loading = "lazy", priority = false }) => {
   return (
     <div ref={ref} className={`relative ${className}`}>
       {!isLoaded && !error && (
-        <div 
-          className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700 animate-pulse" 
+        <div
+          className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700 animate-pulse"
           style={{ backdropFilter: "blur(8px)" }}
         />
       )}
@@ -44,7 +62,9 @@ const Image = ({ src, alt, className, loading = "lazy", priority = false }) => {
           src={imageSrc}
           alt={alt}
           loading={priority ? "eager" : loading}
-          className={`${className} ${!isLoaded ? "opacity-0" : "opacity-100"} transition-opacity duration-300`}
+          className={`${className} ${
+            !isLoaded ? "opacity-0" : "opacity-100"
+          } transition-opacity duration-300`}
           onLoad={handleLoad}
           onError={handleError}
           fetchPriority={priority ? "high" : "auto"}

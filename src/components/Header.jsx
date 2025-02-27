@@ -18,7 +18,10 @@ const Header = () => {
       className: "bottom-7 left-[-0.25rem] md:bottom-10 2xl:left-4",
     },
     {
-      src: darkMode ? Nextjs : Nextjs2,
+      src: {
+        light: Nextjs2,
+        dark: Nextjs
+      },
       alt: "Next.js",
       className: "top-7 md:top-14 right-[-0.25rem] md:-right-3 2xl:right-2",
     },

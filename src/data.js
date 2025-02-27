@@ -91,7 +91,10 @@ export const tools = [
   },
   {
     name: "NextJs",
-    icon: Nextjs2,
+    icon: {
+      light: Nextjs2,
+      dark: Nextjs,
+    },
   },
 ];
 
