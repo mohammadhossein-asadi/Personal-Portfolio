@@ -137,8 +137,8 @@ export const skills = [
   {
     name: "Shadcn UI",
     icon: {
-      light: ShadcnUILight,
-      dark: ShadcnUIDark,
+      light: "https://avatars.githubusercontent.com/u/139895814?s=200&v=4",
+      dark: "https://images.seeklogo.com/logo-png/51/1/shadcn-ui-logo-png_seeklogo-519786.png",
     },
   },
   {
