@@ -1,9 +1,8 @@
 import { useTheme } from "../context/ThemeContext";
-import { FiSun } from "react-icons/fi";
-import { BsFillMoonStarsFill } from "react-icons/bs";
 import { BiMenu } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
 import Logo from "../assets/logo.jpeg";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 const Navbar = () => {
   const { darkMode, isOpen, toggleMenu, toggleTheme } = useTheme();
@@ -39,19 +38,7 @@ const Navbar = () => {
           </ul>
 
           <div className="flex items-center space-x-4">
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-              aria-label={
-                darkMode ? "Switch to light mode" : "Switch to dark mode"
-              }
-            >
-              {darkMode ? (
-                <FiSun className="w-5 h-5 text-gray-200" />
-              ) : (
-                <BsFillMoonStarsFill className="w-5 h-5 text-gray-700" />
-              )}
-            </button>
+            <ThemeSwitcher />
 
             <button
               type="button"

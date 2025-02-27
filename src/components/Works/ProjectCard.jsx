@@ -1,8 +1,12 @@
 import PropTypes from "prop-types";
 import { BsGithub } from "react-icons/bs";
 import { ImLink } from "react-icons/im";
+import { useState } from "react";
+import { ImageSkeleton } from "../shared/Skeleton";
 
 const ProjectCard = ({ project, onClick }) => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   return (
     <div
       className="group relative w-full max-w-[350px] h-[350px] cursor-pointer rounded-xl overflow-hidden bg-black/5 dark:bg-white/5"
@@ -15,10 +19,14 @@ const ProjectCard = ({ project, onClick }) => {
     >
       {/* Image Container with Overlay */}
       <div className="relative h-full w-full">
+        {!imageLoaded && (
+          <ImageSkeleton className="absolute inset-0 w-full h-full" />
+        )}
         <img
           src={project.img}
           alt={project.title}
-          className="w-full h-full object-cover brightness-[0.98] group-hover:brightness-[0.8] transition-all duration-500 group-hover:scale-110"
+          className={`w-full h-full object-cover brightness-[0.98] group-hover:brightness-[0.8] transition-all duration-500 group-hover:scale-110 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+          onLoad={() => setImageLoaded(true)}
         />
 
         {/* Quick Action Links */}

@@ -1,6 +1,7 @@
 import { Nextjs2, Nextjs, Nodejs, Profile, Redux, Reactjs } from "../assets";
 import Resume from "../assets/MohammadhosseinAsadi_Cv.pdf";
 import { useTheme } from "../context/ThemeContext";
+import Image from "./shared/Image";
 
 const Header = () => {
   const { darkMode } = useTheme();
@@ -72,12 +73,11 @@ const Header = () => {
             <div className="relative w-[280px] h-[280px] md:w-[400px] md:h-[400px] 2xl:w-[500px] 2xl:h-[500px] mx-auto">
               {/* Profile Image */}
               <div className="relative z-0">
-                <img
+                <Image
                   src={Profile}
                   alt="Profile"
-                  loading="lazy"
-                  className="w-auto h-full object-cover transform transition-transform duration-500 
-                    hover:scale-105 rounded-xl"
+                  priority={true}
+                  className="w-auto h-full object-cover transform transition-transform duration-500 hover:scale-105 rounded-xl"
                   data-aos="fade-down"
                   data-aos-offset="200"
                   data-aos-delay="50"
@@ -91,19 +91,21 @@ const Header = () => {
                 className="absolute inset-0 z-10"
                 data-aos="fade-up"
                 data-aos-offset="200"
-                data-aos-delay="50"
-                data-aos-duration="700"
+                data-aos-delay="100"
+                data-aos-duration="500"
                 data-aos-easing="ease-in-out"
               >
-                {techIcons.map((icon) => (
-                  <img
+                {techIcons.map((icon, index) => (
+                  <div
                     key={icon.alt}
-                    src={icon.src}
-                    alt={icon.alt}
-                    loading="lazy"
-                    className={`absolute w-12 h-12 md:w-16 md:h-16 transform hover:scale-110 
-                      transition-transform duration-300 bg-white dark:bg-gray-900 rounded-full p-2 ${icon.className}`}
-                  />
+                    className={`absolute ${icon.className}`}
+                  >
+                    <Image
+                      src={icon.src}
+                      alt={icon.alt}
+                      className="w-12 h-12 md:w-16 md:h-16 2xl:w-20 2xl:h-20"
+                    />
+                  </div>
                 ))}
               </div>
             </div>

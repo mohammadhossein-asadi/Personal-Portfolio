@@ -4,6 +4,7 @@ import { ImLink } from "react-icons/im";
 import { BsGithub } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
 import { MdDescription } from "react-icons/md";
+import { VideoSkeleton } from "./shared/Skeleton";
 import ProjectCard from "./Works/ProjectCard";
 import {
   Accordion,
@@ -22,6 +23,7 @@ const Works = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [open, setOpen] = useState(0);
   const modalRef = useRef(null);
+  const [videoLoaded, setVideoLoaded] = useState(false);
 
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
 
@@ -84,12 +86,16 @@ const Works = () => {
                 </div>
 
                 <div className="mt-6 space-y-6">
-                  <div className="aspect-video rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-800">
+                  <div className="aspect-video rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-800 relative">
+                    {!videoLoaded && (
+                      <VideoSkeleton className="absolute inset-0 w-full h-full" />
+                    )}
                     <video
                       src={selectedProject.video}
-                      className="w-full h-full object-cover"
+                      className={`w-full h-full object-cover ${videoLoaded ? 'opacity-100' : 'opacity-0'}`}
                       controls
                       autoPlay
+                      onLoadedData={() => setVideoLoaded(true)}
                     />
                   </div>
 

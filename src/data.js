@@ -1,3 +1,4 @@
+import { useTheme } from "./context/ThemeContext";
 import {
   CSS3,
   Express,
@@ -18,6 +19,11 @@ import {
   tictactoe,
   connectify,
 } from "./assets";
+
+const ShadcnUILight =
+  "https://raw.githubusercontent.com/shadcn-ui/ui/main/apps/www/public/logo.svg";
+const ShadcnUIDark =
+  "https://raw.githubusercontent.com/shadcn-ui/ui/main/apps/www/public/logo-dark.svg";
 
 import Personal from "./assets/work/personal.gif";
 import Portfolio from "./assets/work/portfolio.mp4";
@@ -104,7 +110,10 @@ export const skills = [
   },
   {
     name: "NextJs",
-    icon: ({ darkMode }) => (darkMode ? Nextjs : Nextjs2),
+    icon: {
+      light: Nextjs2,
+      dark: Nextjs,
+    },
   },
   {
     name: "NodeJs",
@@ -121,6 +130,17 @@ export const skills = [
   {
     name: "Tailwind",
     icon: Tailwind,
+  },
+  {
+    name: "Shadcn UI",
+    icon: {
+      light: ShadcnUILight,
+      dark: ShadcnUIDark,
+    },
+  },
+  {
+    name: "Bootstrap",
+    icon: "https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Bootstrap.svg",
   },
   {
     name: "CSS3",
