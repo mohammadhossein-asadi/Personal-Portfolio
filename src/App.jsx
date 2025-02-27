@@ -4,6 +4,7 @@ import LoadingSpinner from "./components/shared/LoadingSpinner";
 import { useInitialLoading } from "./hooks/useInitialLoading";
 import Navbar from "./components/Navbar";
 import Experience from "./components/Experience";
+import ScrollToTop from "./components/shared/ScrollToTop";
 
 // Lazy load components
 const Header = lazy(() => import("./components/Header"));
@@ -95,6 +96,7 @@ function AppContent() {
             </footer>
           </main>
         </Suspense>
+        <ScrollToTop />
       </div>
     </div>
   );
