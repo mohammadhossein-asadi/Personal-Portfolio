@@ -22,7 +22,8 @@ export { default as house } from "./work/house.png";
 export { default as port1 } from "./work/port1.png";
 export { default as port2 } from "./work/port2.png";
 
-export { default as Profile } from "./profile2.jpg";
+export { default as Profile } from "./Officialprofile.png";
+// export { default as Profile } from "./profile2.jpg";
 // export { default as Profile } from "./profile.png";
 export { default as Profile2 } from "./profile3.jpg";
 

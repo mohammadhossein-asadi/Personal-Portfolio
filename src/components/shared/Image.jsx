@@ -50,11 +50,27 @@ const Image = ({ src, alt, className, loading = "lazy", priority = false }) => {
   };
 
   return (
-    <div ref={ref} className={`relative ${className}`}>
+    <div
+      ref={ref}
+      className={`relative ${className}`}
+      style={{
+        WebkitTransform: "translateZ(0)",
+        transform: "translateZ(0)",
+        WebkitBackfaceVisibility: "hidden",
+        backfaceVisibility: "hidden",
+        WebkitPerspective: 1000,
+        perspective: 1000,
+      }}
+    >
       {!isLoaded && !error && (
         <div
           className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700 animate-pulse"
-          style={{ backdropFilter: "blur(8px)" }}
+          style={{
+            backdropFilter: "blur(8px)",
+            WebkitBackdropFilter: "blur(8px)",
+            WebkitTransform: "translateZ(0)",
+            transform: "translateZ(0)",
+          }}
         />
       )}
       {imageSrc && (
@@ -64,10 +80,21 @@ const Image = ({ src, alt, className, loading = "lazy", priority = false }) => {
           loading={priority ? "eager" : loading}
           className={`${className} ${
             !isLoaded ? "opacity-0" : "opacity-100"
-          } transition-opacity duration-300`}
+          } transition-opacity duration-300 max-w-full h-auto will-change-transform`}
           onLoad={handleLoad}
           onError={handleError}
           fetchPriority={priority ? "high" : "auto"}
+          style={{
+            WebkitTransform: "translateZ(0)",
+            transform: "translateZ(0)",
+            WebkitBackfaceVisibility: "hidden",
+            backfaceVisibility: "hidden",
+            WebkitUserSelect: "none",
+            userSelect: "none",
+            WebkitTouchCallout: "none",
+            touchCallout: "none",
+          }}
+          draggable="false"
         />
       )}
     </div>

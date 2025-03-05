@@ -73,14 +73,14 @@ const Header = () => {
 
           {/* Profile Image Section */}
           <div className="w-full lg:w-1/2">
-            <div className="relative w-[280px] h-[280px] md:w-[400px] md:h-[400px] 2xl:w-[500px] 2xl:h-[500px] mx-auto">
+            <div className="relative w-full max-w-[280px] md:max-w-[400px] 2xl:max-w-[500px] aspect-square mx-auto">
               {/* Profile Image */}
-              <div className="relative z-0">
+              <div className="relative z-0 w-full h-full">
                 <Image
                   src={Profile}
                   alt="Profile"
                   priority={true}
-                  className="w-auto h-full object-cover transform transition-transform duration-500 hover:scale-105 rounded-xl"
+                  className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-105 rounded-xl"
                   data-aos="fade-down"
                   data-aos-offset="200"
                   data-aos-delay="50"

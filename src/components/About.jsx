@@ -1,4 +1,3 @@
-import { Profile2 } from "../assets";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import {
   BsFillTelephoneFill,
@@ -39,23 +38,9 @@ const About = () => {
   return (
     <section id="about" className="py-16 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
-          {/* Image Container */}
-          <div className="w-full lg:w-1/3">
-            <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200" />
-              <div className="relative aspect-square overflow-hidden rounded-lg">
-                <img
-                  src={Profile2}
-                  alt="Profile"
-                  className="w-full h-full object-cover transform transition duration-500 group-hover:scale-110"
-                />
-              </div>
-            </div>
-          </div>
-
+        <div className="flex flex-col gap-8">
           {/* Content Container */}
-          <div className="w-full lg:w-2/3 space-y-8">
+          <div className="w-full space-y-8">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
                 About Me
